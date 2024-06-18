@@ -77,13 +77,13 @@ let etCounter = 0;
 for (i = 0; i < longText.length; i++) {
   //Faltarían por añadir otras posibilidades, como ;, :, (), -, etc.
   if (
-    (longText[i] === "e") &
-    (longText[i + 1] === "t") &
-    ((longText[i - 1] === " ") |
-      (longText[i - 1] === ",") |
-      (longText[i - 1] === ".")) &
-    ((longText[i + 2] === " ") |
-      (longText[i + 2] === ".") |
+    (longText[i] === "e") &&
+    (longText[i + 1] === "t") &&
+    ((longText[i - 1] === " ") ||
+      (longText[i - 1] === ",") ||
+      (longText[i - 1] === ".")) &&
+    ((longText[i + 2] === " ") ||
+      (longText[i + 2] === ".") ||
       (longText[i + 2] === ","))
   ) {
     etCounter++;
@@ -101,10 +101,10 @@ let phraseReversed = "";
 
 for (i = 0; i < phraseToCheck.length; i++) {
   if (
-    (enMayuscula[i] !== " ") &
-    (enMayuscula[i] !== ",") &
-    (enMayuscula[i] !== "!") &
-    (enMayuscula[i] !== "?") &
+    (enMayuscula[i] !== " ") &&
+    (enMayuscula[i] !== ",") &&
+    (enMayuscula[i] !== "!") &&
+    (enMayuscula[i] !== "?") &&
     (enMayuscula[i] !== "'")
   ) {
     comparable = comparable + enMayuscula[i];
@@ -114,10 +114,10 @@ for (i = 0; i < phraseToCheck.length; i++) {
 }
 for (i = phraseToCheck.length - 1; i >= 0; i--) {
   if (
-    (enMayuscula[i] !== " ") &
-    (enMayuscula[i] !== ",") &
-    (enMayuscula[i] !== "!") &
-    (enMayuscula[i] !== "?") &
+    (enMayuscula[i] !== " ") &&
+    (enMayuscula[i] !== ",") &&
+    (enMayuscula[i] !== "!") &&
+    (enMayuscula[i] !== "?") &&
     (enMayuscula[i] !== "'")
   ) {
     phraseReversed = phraseReversed + enMayuscula[i];
